@@ -8,6 +8,12 @@ html {
     scroll-behavior: smooth;
 }
 
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -27,6 +33,13 @@ body {
         "main"
         "footer";
     min-height: 100vh;
+}
+
+
+h1, h2, h3, h4, p, li, button, label, a {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 header {
@@ -187,6 +200,13 @@ img {
     transition: border-color 0.3s ease;
 }
 
+
+#contato input,
+#contato textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 #contato input:focus,
 #contato textarea:focus {
     outline: none;
@@ -307,6 +327,21 @@ footer nav a:hover {
     footer nav li {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    section {
+        padding: 1.25rem;
+    }
+
+    #servicos {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.25rem;
+    }
+
+    header h1 {
+        font-size: 2.1rem;
     }
 }
 
